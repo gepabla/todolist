@@ -1,0 +1,13 @@
+<div class="container">
+    <h3 class="text-center">To-Do List</h3>
+    <hr>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+			<div ng-repeat="item in items" item-switch item="item" item-index="$index" class="notice notice-{{classMap[item.type]}}">
+			</div>
+		</div>
+	</div>
+</div>
