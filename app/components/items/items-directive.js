@@ -9,6 +9,13 @@ angular.module('myApp.items.directive', [])
             item: '=',
             itemIndex: "="
         },
-        templateUrl: 'templates/itemSwitchTemplate.html'
+        templateUrl: 'templates/itemSwitchTemplate.html',
+        link:function($scope){
+        		console.log("directive $scope",$scope)
+        		$scope.editeme = function(item){
+        			console.log("ahora si editeme",item);
+        			$scope.$emit("EDIT_CHANNEL",item);
+        		}
+        }
     }
 }]);

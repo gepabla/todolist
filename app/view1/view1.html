@@ -2,12 +2,24 @@
     <h3 class="text-center">To-Do List</h3>
     <hr>
 </div>
+{{items | json }}
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+			<div ng-repeat="item in items" item-switch item="item" 
+			item-index="$index" class="items-switch notice notice-{{classMap[item.type]}}"
+			ng-click="meDieron(item)">
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class="container">
     <div class="row">
         <div class="col-xs-12">
-			<div ng-repeat="item in items" item-switch item="item" item-index="$index" class="notice notice-{{classMap[item.type]}}">
-			</div>
-		</div>
+        		<div ng-show="onEditing">
+        			ponga todo lo editar aqui, si le da la gana
+        		</div>
+        </div>
 	</div>
 </div>
