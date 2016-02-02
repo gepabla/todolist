@@ -1,6 +1,5 @@
 'use strict';
-//commit a master dev
-
+//commit a master dev.
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
