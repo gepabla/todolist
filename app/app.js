@@ -1,5 +1,5 @@
 'use strict';
-
+//commit a master dev.
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
@@ -9,5 +9,5 @@ angular.module('myApp', [
   'myApp.items'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.otherwise({redirectTo: '/view2'});
 }]);
