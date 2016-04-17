@@ -5,6 +5,37 @@
 
 <div class="container">
     <div class="row">
+    	<div class="panel panel-default">
+    		<div class="panel-heading font-bold">                  
+		      Actions
+		    </div>
+		    <div class="panel-body">
+		    	<a ng-click="add()" href="">+ Add a New Todo</a>
+		    </div>
+    	</div>
+		<div class="panel panel-default" ng-if="showForm">
+		    <div class="panel-heading font-bold">                  
+		      Add Todo
+		    </div>
+		    <div class="panel-body">
+		      <form class="form-inline" ng-submit="save()">
+		        <div class="form-group">
+		            <select name="account" class="form-control" required placeholder="Pick one"
+						ng-model="category">
+		              <option>GROCERIES</option>
+		              <option>CAR</option>
+		              <option>UNIVERSITY</option>
+		              <option>PAYMENTS</option>
+		            </select>
+		        </div>
+		        <div class="form-group">
+		          <label class="sr-only" for="exampleInputPassword2">To do</label>
+		          <input type="text" class="form-control" id="exampleInputPassword2" placeholder="To-do name" ng-model="todoName">
+		        </div>
+		        <input type="submit" class="btn btn-success" id="submit" value="Add" >
+		      </form>
+		    </div>
+		</div
         <div class="col-xs-12">
 			<div ng-repeat="item in items" item-switch item="item" item-index="$index" class="notice notice-{{classMap[item.type]}}">
 			</div>

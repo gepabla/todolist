@@ -14,5 +14,9 @@ angular.module('myApp.items.service', [])
   this.getItems = function(){
 	  return items;
   };
+
+  this.saveItem = function(item){
+    items.push(item);
+  }
   
 });
