@@ -10,7 +10,8 @@
 		      Actions
 		    </div>
 		    <div class="panel-body">
-		    	<a ng-click="add()" href="">+ Add a New Todo</a>
+		    	<a ng-click="add()" href="">+ Add a New Todo</a>&nbsp;&nbsp;
+		    	<a ng-click="delete()" href=""> - Remove Selected Todos</a>
 		    </div>
     	</div>
 		<div class="panel panel-default" ng-if="showForm">
@@ -38,6 +39,7 @@
 		</div
         <div class="col-xs-12">
 			<div ng-repeat="item in items" item-switch item="item" item-index="$index" class="notice notice-{{classMap[item.type]}}">
+			<input ng-model="item.isDone" type="checkbox" class="checkbox" />
 			</div>
 		</div>
 	</div>

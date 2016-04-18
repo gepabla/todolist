@@ -1,4 +1,11 @@
-<strong>{{item.type}}</strong> {{item.description}}
+<div class=" pull-left">
+	<input ng-model="item.remove" 
+		id="someSwitchOptionDefault{{itemIndex}}" 
+		name="someSwitchOption001{{itemIndex}}"
+		class = "checkbox" 
+		type="checkbox" /> 
+		<label for="someSwitchOptionDefault{{itemIndex}}" class="label-info"></label>
+</div>&nbsp;<strong>{{item.type}}</strong> {{item.description}}
 <div class="material-switch pull-right">
 	<input ng-model="item.isDone" 
 		id="someSwitchOptionDefault{{itemIndex}}" 

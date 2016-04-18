@@ -4,11 +4,11 @@ angular.module('myApp.items.service', [])
 
 .service('itemsService',function() {
   var items = [
-               {type:"GROCERIES",description:"Buy Milk",isDone:true},
-               {type:"CAR",description:"Wash Car",isDone:false},
-               {type:"UNIVERSITY",description:"Proy 3 To Do List Homework",isDone:false},
-               {type:"PAYMENTS",description:"Pay Cenfotec",isDone:false},
-               {type:"PAYMENTS",description:"Pay PSN Plus",isDone:false}               
+               {remove: false, type:"GROCERIES",description:"Buy Milk",isDone:true},
+               {remove: false, type:"CAR",description:"Wash Car",isDone:false},
+               {remove: false, type:"UNIVERSITY",description:"Proy 3 To Do List Homework",isDone:false},
+               {remove: false, type:"PAYMENTS",description:"Pay Cenfotec",isDone:false},
+               {remove: false, type:"PAYMENTS",description:"Pay PSN Plus",isDone:false}               
               ];
   
   this.getItems = function(){
@@ -17,6 +17,13 @@ angular.module('myApp.items.service', [])
 
   this.saveItem = function(item){
     items.push(item);
+  }
+
+  this.deleteItem = function(itemsToRemove){
+    for(var i=0; i< itemsToRemove.length; i++){
+      var index = items.indexOf(itemsToRemove[i]);
+      items.splice(index, 1);    
+    }     
   }
   
 });
